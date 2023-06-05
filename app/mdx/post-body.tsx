@@ -4,6 +4,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 
 const PostBody = async ({ source }: { source: string }) => {
   return (
@@ -27,6 +28,7 @@ const PostBody = async ({ source }: { source: string }) => {
               rehypeHighlight,
               rehypeCodeTitles,
             ],
+            remarkPlugins: [remarkGfm],
           },
         }}
       />

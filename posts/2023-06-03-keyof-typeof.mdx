@@ -4,21 +4,19 @@ slug: typescript-keyod-typeof
 tags: ['TypeScript']
 ---
 
-# keyof 和 typeof
-
-`typeof`和`keyof`是 TypeScript 中常用的两个操作符，本文会对这两个操作符的基本概念和实际应用做一个详细的阐述。
+`typeof` 和 `keyof` 是 TypeScript 中常用的两个操作符，本文会对这两个操作符的基本概念和实际应用做一个详细的阐述。
 
 ## 字面量类型
 
-在了解`typeof`和`keyof`之前，我们首先需要了解什么是字面量类型以及联合字面量类型。
+在了解 `typeof` 和 `keyof` 之前，我们首先需要了解什么是字面量类型以及联合字面量类型。
 
-TypeScript 中的字面量类型是更具体的`string`、`number`或`boolean`类型，它可以被这样定义：
+TypeScript 中的字面量类型是更具体的`string`、`number` 或 `boolean`类型，它可以被这样定义：
 
 ```typescript
 type Greeting = 'hello';
 ```
 
-这意味着类型为`Greeting`的变量只能有一个字符串值`'hello'`：
+这意味着类型为`Greeting`的变量只能有一个字符串值 `'hello'`：
 
 ```typescript
 const foo: Greeting = 'hello';
