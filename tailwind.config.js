@@ -18,6 +18,7 @@ module.exports = {
                 content: 'none',
               },
               code: {
+                color: theme('colors.slate.700'),
                 backgroundColor: theme('colors.stone.100'),
                 borderRadius: theme('borderRadius.DEFAULT'),
                 paddingLeft: theme('spacing[1.5]'),
