@@ -3,6 +3,7 @@ import path from 'path';
 import type { Post } from './types';
 import fs from 'fs/promises';
 import { cache } from 'react';
+import dayjs from 'dayjs';
 
 export const getPosts = cache(async () => {
   const posts = await fs.readdir('posts/');
@@ -15,7 +16,11 @@ export const getPosts = cache(async () => {
         const postContent = await fs.readFile(filePath, 'utf8');
         const { data, content } = matter(postContent);
 
-        return { ...data, body: content } as Post;
+        return {
+          ...data,
+          body: content,
+          createdDate: dayjs(file.substring(0, 10), 'YYYY-MM-DD').toDate(),
+        } as Post;
       })
   );
 });
