@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body>
+      <body className="text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
         <ThemeProvider>
           <Header />
           {children}
