@@ -1,10 +1,10 @@
-import PostListRSC from '../components/post-list/rsc';
+import PostList from '../components/post-list';
 
-const Post = async ({ source }: { source: any }) => {
+const Post = async () => {
   return (
     <main className="flex min-h-screen flex-col">
       {/* @ts-expect-error async rsc support */}
-      <PostListRSC />
+      <PostList />
     </main>
   );
 };

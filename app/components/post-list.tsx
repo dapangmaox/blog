@@ -1,11 +1,8 @@
-import { Post } from '@/app/lib/types';
+import getPostList from '@/app/lib/get-posts';
 import NextLink from 'next/link';
 
-type PostListProps = {
-  posts: Post[];
-};
-
-export default function PostList({ posts: posts }: PostListProps) {
+const PostList = async () => {
+  const posts = await getPostList();
   return (
     <>
       <ul>
@@ -21,4 +18,6 @@ export default function PostList({ posts: posts }: PostListProps) {
       </ul>
     </>
   );
-}
+};
+
+export default PostList;
