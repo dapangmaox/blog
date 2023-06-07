@@ -21,12 +21,9 @@ const PostList = async () => {
                   alt="cover"
                 />
               </Link>
-              <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 dark:text-slate-100">
-                  <Link href={post.slug}>
-                    <span className="absolute inset-0" />
-                    {post.title}
-                  </Link>
+              <div>
+                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-slate-100 dark:hover:text-slate-300 hover:text-gray-500">
+                  <Link href={post.slug}>{post.title}</Link>
                 </h3>
                 <p className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600 dark:text-slate-400">
                   {post.description}
