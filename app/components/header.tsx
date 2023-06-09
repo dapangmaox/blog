@@ -10,7 +10,7 @@ const Header = () => {
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center justify-center">
             <Link href={'/'}>
-              <span className="font-bold text-xl dark:text-slate-50">
+              <span className="font-bold text-xl text-gray-900 dark:text-slate-50">
                 大胖猫 ♥ Web
               </span>
             </Link>

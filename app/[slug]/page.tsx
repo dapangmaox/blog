@@ -10,10 +10,16 @@ export async function generateStaticParams() {
 }
 
 const PostPage = async ({ params }: { params: { slug: string } }) => {
-  const { body } = (await getPost(params.slug)) as Post;
+  const { body, cover, title } = (await getPost(params.slug)) as Post;
 
   return (
     <>
+      <img
+        className="w-full rounded-xl"
+        src={`cover/${cover}.jpg`}
+        alt="cover"
+      />
+      <h1 className="text-center">{title}</h1>
       {/* @ts-expect-error RSC */}
       <PostBody source={body} />
     </>
