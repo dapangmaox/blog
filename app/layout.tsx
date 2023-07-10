@@ -1,3 +1,4 @@
+import Footer from './components/footer';
 import Header from './components/header';
 import './globals.css';
 import ThemeProvider from './theme-provider';
@@ -14,10 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className="text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+      <body className="text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 flex flex-col min-h-screen">
         <ThemeProvider>
           <Header />
-          {children}
+          <div className="grow">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
